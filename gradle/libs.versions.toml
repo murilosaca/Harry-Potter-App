@@ -1,0 +1,52 @@
+[versions]
+# Versões da plataforma Android e Kotlin
+# Use as versões que seu projeto gerou inicialmente se forem diferentes, mas estas são um bom ponto de partida.
+agp = "8.3.0" # Android Gradle Plugin version
+kotlin = "1.9.0" # Kotlin version
+
+# Dependências AndroidX e Material Design
+coreKtx = "1.13.1"
+appcompat = "1.6.1"
+material = "1.12.0"
+constraintlayout = "2.1.4"
+
+# Dependências de Rede e Imagens
+retrofit = "2.9.0"
+gsonConverter = "2.9.0"
+coroutinesCore = "1.7.3" # Coroutines core library
+coroutinesAndroid = "1.7.3" # Coroutines Android utilities
+coil = "2.6.0" # Image loading library
+
+# Dependências de Teste
+junit = "4.13.2" # Standard JUnit
+androidxJunit = "1.1.5" # AndroidX JUnit extension
+espressoCore = "3.5.1" # Espresso core for UI tests
+
+
+# Seção para DEFINIÇÃO DE PLUGINS (referenciados no build.gradle.kts com alias(libs.plugins.nome_do_plugin))
+[plugins]
+# Plugin do Android Application
+android-application = { id = "com.android.application", version.ref = "agp" }
+# Plugin do Kotlin Android
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+
+# Seção para DEFINIÇÃO DE BIBLIOTECAS (referenciadas no build.gradle.kts com libs.nome_da_lib)
+[libraries]
+# Dependências AndroidX e Material Design
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# Dependências de Rede e Imagens
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "gsonConverter" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutinesCore" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesAndroid" }
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+
+# Dependências de Teste
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

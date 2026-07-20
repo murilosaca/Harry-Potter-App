@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.dashboard.DashboardActivity">
+
+    <TextView
+        android:id="@+id/tv_dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harry Potter API App"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:columnCount="2"
+        app:rowCount="3"
+        app:alignmentMode="alignBounds"
+        app:columnSpec=" predominante"
+        app:rowSpec=" predominante"
+        app:layout_constraintBottom_toTopOf="@id/btn_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dashboard_title"
+        app:layout_constraintVertical_bias="0.0"
+        app:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/btn_list_specific_character"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Personagem Específico"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill" />
+
+        <Button
+            android:id="@+id/btn_list_teachers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Professores de Hogwarts"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill" />
+
+        <Button
+            android:id="@+id/btn_list_house_students"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Estudantes por Casa"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill" />
+
+        <Button
+            android:id="@+id/btn_view_spells"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Ver Feitiços"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill" />
+
+        <Button
+            android:id="@+id/btn_placeholder_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Em Breve..."
+            android:enabled="false"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill" />
+
+        <Button
+            android:id="@+id/btn_placeholder_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Em Breve..."
+            android:enabled="false"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:layout_gravity="fill" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sair do Aplicativo"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
